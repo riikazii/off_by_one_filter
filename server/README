@@ -1,0 +1,8 @@
+Directions for use:
+- Place somewhere where you have an HTTP server with PHP, and write permissions.
+- Create a directory called upload, and a file called uploads.txt
+- Update your processing sketch to point to your URL, and enjoy!
+
+Love,
+Matt
+
